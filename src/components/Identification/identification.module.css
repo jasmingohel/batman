@@ -1,0 +1,354 @@
+/*The eye icon on the password can be stylize with any tool you want
+to use (the only way i know to do this correctly is using JS)
+this is meant to be wide supported and it really depends on you browsers
+if i realize any way to stylize the eye it could be added in the future
+in other input type*/
+
+.container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    aspect-ratio: 16/9;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .inputcontainer {
+    /* background-color: rgb(151, 0, 0); */
+    filter: drop-shadow(46px 36px 24px #ffffff) drop-shadow(-55px -40px 25px #ff0000);
+    animation: blinkShadowsFilter 8s ease-in infinite;
+  }
+  
+  .inputcontent {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-inline: 1em;
+  }
+  
+  .inputcontent::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(40px);
+    -webkit-clip-path: polygon(26% 0, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    clip-path: polygon(26% 0, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    background: rgba(122, 251, 255, 0.5568627451);
+    transition: all 1s ease-in-out;
+  }
+  
+  .inputcontent::after {
+    content: "";
+    position: absolute;
+    /* width: 98%;
+    height: 98%; */
+    box-shadow: inset 0px 0px 20px 20px #212121;
+    background: repeating-linear-gradient(to bottom, transparent 0%, rgb(100, 93, 201) 1px, rgb(0, 0, 0) 3px, hsl(295, 76%, 67%) 5px, #153544 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsla(295, 60%, 12%, 0.99) 100%);
+    -webkit-clip-path: polygon(26% 0, 31% 5%, 61% 5%, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    clip-path: polygon(26% 0, 31% 5%, 61% 5%, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    /* animation: backglitch 50ms linear infinite; */
+  }
+  
+  .inputdist {
+    z-index: 80;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-inline: 1em;
+    padding-block: 1.2em;
+    grid-template-columns: 1fr;
+  }
+  
+  .inputtype {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.1rem;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+  }
+  
+  .inputis {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    transition: all 1s ease-in-out;
+    transform: translateX(0px);
+    border-bottom: 1px solid hsl(0, 0%, 0%);
+  }
+  
+  .inputis:hover {
+    /* background: linear-gradient(90deg, transparent 0%, rgb(243, 245, 245) 27%, rgb(189, 233, 236) 63%, transparent 100%); */
+    transition: all 1s ease-in-out;
+  }
+  
+  .inputcontent:focus-within::before {
+    background: hsla(0, 0%, 100%, 0.814);
+    transition: all 1s ease-in-out;
+  }
+  
+  .inputis:focus {
+    transform: translateX(10px);
+    outline: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: hsl(192, 100%, 88%);
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.226) 27%, rgba(255, 255, 255, 0.2) 63%, transparent 100%);
+    transition: all 1s ease;
+  }
+  
+  .inputis::-moz-placeholder {
+    color: hsl(0, 0%, 0%);
+  }
+  
+  .inputis::placeholder {
+    color: hsla(0, 0%, 0%, 0.806);
+  }
+  .KnowsPassword
+  {
+    display: flex;
+    font-size: 50px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  /* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    /* -webkit-text-stroke: 1px var(--text-stroke-color); */
+  }
+  /* this is the text, when you hover on button */
+  .hoverText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid #ff3737;
+    border-left: var(--border-right) solid #ff3737;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+    animation: Conform 1s ease,Blink .5s infinite;
+    width: 100%;
+    /* filter: drop-shadow(0 0 23px var(--animation-color)) */
+  }
+  @keyframes Conform {
+    0%
+    {
+        /* --border-right:00px; */
+        width: 0%;
+    }
+    50%
+    {
+        /* --border-right:00px; */
+    }
+    100%{
+        width: 100%;
+        /* border-color: transparent; */
+        /* filter: drop-shadow(0 0 23px var(--animation-color)) */
+    }
+    
+  }
+  @keyframes Blink {
+    0%
+    {
+        border-color:  #f80404;
+    }
+    100%{
+        border-color: transparent;
+    }
+    
+  }
+  /* hover */
+  .button:hover .hoverText {
+
+  }
+  @keyframes backglitch {
+    0% {
+      box-shadow: inset 0px 20px 20px 30px #212121;
+    }
+  
+    50% {
+      box-shadow: inset 0px -20px 20px 30px hsl(297, 42%, 10%);
+    }
+  
+    to {
+      box-shadow: inset 0px 20px 20px 30px #212121;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate(-50%, 20%);
+    }
+  
+    50% {
+      transform: rotate(180deg) translate(40%, 10%);
+    }
+  
+    to {
+      transform: rotate(360deg) translate(-50%, 20%);
+    }
+  }
+  
+  @keyframes blinkShadowsFilter {
+    0% {
+      filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+  
+    25% {
+      filter: drop-shadow(46px -36px 24px rgba(214, 14, 0, 0.898)) drop-shadow(-55px 40px 24px #fd0606);
+    }
+  
+    50% {
+      filter: drop-shadow(46px 36px 30px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 30px rgba(159, 48, 169, 0.2941176471));
+    }
+  
+    75% {
+      filter: drop-shadow(20px -18px 25px rgba(253, 253, 253, 0.898)) drop-shadow(-20px 20px 25px rgba(159, 48, 169, 0.2941176471));
+    }
+  
+    to {
+      filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+  }
+
+
+  .Batman {
+    border: none;
+    position: relative;
+    width: 100vw;
+    height:100vh;
+    /* width: 200px;
+    height: 73px; */
+    padding: 0;
+    z-index: 2;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+    -webkit-mask-size: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    transform: translateY(8px);
+    animation: InShadows  4s ease;
+   }
+   @keyframes InShadows {
+    from{
+     height: 0;
+    } 
+    to{
+      height: 100vh;
+    }
+    
+   }
+   .Batman:after {
+    content: '';
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    bottom: 0;
+    transform: rotate(50deg);
+    box-shadow: 0px 0 0 0 white;
+    /* box-shadow: 0px -170px 56px 12px #ffffffa6; */
+    transition: all 2s ease;
+   }
+   
+   .Batman:hover:after {
+    animation: Rise steps(1000) 10s infinite ;
+  }
+  @keyframes Rise {
+    from
+    {
+      box-shadow: -200px -50px 106px 12px #ffffffa6;
+    }
+    50%{
+      box-shadow: -200px -590px 106px 12px #ffffffa6;
+    }
+    100%{
+      box-shadow: -200px -50px 106px 12px #ffffffa6;
+    }
+   }
+   
+   .Batman .Message {
+    position: absolute;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 100;
+    left: 50%;
+    top: 39%;
+    letter-spacing: 3px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    color: rgb(248, 13, 13);
+    transition: all 2s ease;
+   }
+   
+   .Batman:hover .Message {
+    color: white;
+   }
+   
+   .Batman:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+   }
+   
+   .Batman:hover:before {
+    width: 100%;
+   }
+   
+   .SecrectMessage
+   {
+    color: red !important;
+   }
+   

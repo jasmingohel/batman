@@ -1,0 +1,72 @@
+
+.Intro
+{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    height: 100vh;
+    text-shadow: 2px 0px 0px rgb(241, 241, 241), 
+    0px 0px 10px #ece7e7;
+    animation: intro 2s ease,Blood 15s infinite;
+    cursor: not-allowed;
+    /* text-shadow: 3px 25px 5px rgb(241 241 241), 0px -30px 10px rgb(236 231 231); */
+}
+@keyframes intro {
+    50%
+    {
+        /* text-shadow: 3px 25px 5px rgb(255, 244, 244), 0px -30px 10px rgb(85, 85, 85); */
+        text-shadow: 0 2px 1px #747474, 
+        -1px 3px 1px #c5578b, 
+        -2px 5px 1px #1bac63, 
+        -3px 7px 1px #357ab3,
+        -4px 9px 1px #bdba28e3,
+        -5px 11px 1px #8e43cc,
+        -6px 13px 1px #54fdd3,
+        -7px 15px 1px #ffffff, 
+        -8px 17px 1px #8e8e8e,
+        -9px 19px 1px #47b850,
+        -10px 21px 1px #039cd8,
+        -11px 23px 1px #0623c9,
+        -12px 25px 1px #6e0cdd, 
+        -13px 27px 1px rgb(191, 6, 197),
+        -14px 29px 1px #f50743,
+        -15px 31px 1px #db3636,
+        -16px 33px 1px rgb(250, 0, 0),
+        -17px 35px 1px #e5ff00, 
+        -18px 37px 1px #c8ff00,
+        -19px 39px 1px #03f817,
+        -20px 41px 1px #05ee5e,
+        -21px 43px 1px #500cee,
+        -22px 45px 1px #eccd19, 
+        -23px 47px 1px #6a9bf7,
+        -24px 49px 1px #f11717,
+        -25px 51px 1px #28b0da,
+        -26px 53px 1px #34ca61;
+    }
+}
+@keyframes Blood {
+    50%{
+        color: red;
+        text-shadow: 3px 0px 7px rgb(161, 5, 5), -3px 0px 7px rgb(190, 28, 6), 0px 4px 7px rgb(252, 55, 55);
+    }
+    
+}
+
+.ChangedMessage
+{
+    /* transform: translateY(-100%); */
+    animation: Change 3s ease,Blood 15s infinite;
+}
+@keyframes Change {
+    0%    
+    {
+       opacity: 0;
+    }
+   
+    100%    
+    {
+        opacity: 1;
+    }
+}

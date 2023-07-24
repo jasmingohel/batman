@@ -1,13 +1,18 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=PT+Sans:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Fasthand&family=IM+Fell+DW+Pica+SC&family=Lilita+One&family=PT+Sans:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fasthand&family=IM+Fell+DW+Pica+SC&family=Lilita+One&family=PT+Sans:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fasthand&family=Fondamento:ital@0;1&family=IM+Fell+DW+Pica+SC&family=Lilita+One&family=PT+Sans:wght@400;700&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* font-family: 'Lilita One', cursive; */
+  /* font-family: 'PT Sans', sans-serif; */
+  /* font-family: 'Fasthand', cursive; */
+/* font-family: 'Lilita One', cursive; */
+/* font-family: 'PT Sans', sans-serif; */
+font-family: 'IM Fell DW Pica SC', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

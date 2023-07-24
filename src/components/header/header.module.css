@@ -1,0 +1,60 @@
+.Header
+{
+    z-index: 10;
+    position:sticky;
+    top: 20px;
+    width: 100%;
+    animation: Blood 5s steps(1000) ;
+}
+@keyframes Blood {
+    50%{
+        color: red;
+    }
+    
+}
+.Header .headerul
+{
+    display: flex;
+}
+.headerli
+{
+    list-style: none;
+    margin: 5px 20px;
+}
+.headerli:hover
+{
+    color: red;
+    transition: color 2s ease;
+    cursor: crosshair;
+}
+.Contact:hover{
+    text-decoration: line-through;
+    position: relative;
+    transition: all 2s ease-in-out;
+}
+.Contact::before{
+    content: 'Dont Even';
+    position: absolute;
+    width: 100%;
+    left:110%;
+    color: transparent;
+}
+.Contact:hover::before{
+    color: red;
+    transition: all 1s ease;
+}
+.Menu::before{
+    content: 'Reach The Bat Signature....';
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    opacity: .2;
+    left:10%;
+    color: transparent;
+}
+.Menu:hover::before{
+    opacity: 1;
+    color: red;
+    top: 100%;
+    transition: all 1s ease;
+}
