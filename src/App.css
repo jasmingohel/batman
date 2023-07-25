@@ -30,12 +30,11 @@
   /* animation: Glitch .2s ease; */
   /* filter: drop-shadow(3px 13px 10px green); */
 }
-/* @keyframes Glitch {
-    50%{
-      transform: translateY(100px) translateX(100px);
-    }
-  } */
 
+.Gone {
+  opacity: 0;
+  transition: all 3s ease;
+}
 @keyframes cray {
   2% {
     font-weight: 300;
@@ -106,7 +105,6 @@
     /* font-family: 'Lilita One', cursive; */
     text-decoration: none;
     text-transform: none;
-
   }
   22% {
     font-weight: 700;

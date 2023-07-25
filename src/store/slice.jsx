@@ -8,6 +8,7 @@ const initialState = {
   IsUpdate:true,
   changeMesage:false,
   Glitch:false,
+  Gone:false,
   BatCounter:0,
 }
 // GET USER DATA //
@@ -70,6 +71,12 @@ export const CounterSlice = createSlice({
     },
     DisableGlitch:(state)=>{
       state.Glitch=false;
+    },
+    EnableGone:(state)=>{
+      state.Gone=true;
+    },
+    DisableGone:(state)=>{
+      state.Gone=false;
     }
     /** 
       GET USER DATA
@@ -102,7 +109,7 @@ export const CounterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setChangeMessage, setisLoading, setBatCounter,setGlitch,DisableGlitch } = CounterSlice.actions
+export const { setChangeMessage, setisLoading, setBatCounter,setGlitch,DisableGlitch,EnableGone,DisableGone } = CounterSlice.actions
 
 export default CounterSlice.reducer
 

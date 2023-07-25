@@ -15,7 +15,7 @@ import { setisLoading } from './store/slice';
 function App() {
   let dispatch=useDispatch();
   const isLoading = useSelector((state) => state.counter.isLoading);
-  const Glitch = useSelector((state) => state.counter.Glitch);
+  const {Glitch,Gone} = useSelector((state) => state.counter);
 
   useEffect(() => {
   setTimeout(() => {
@@ -32,7 +32,7 @@ function App() {
   }
   
   return (
-    <div className={`App ${Glitch ? 'GlitchingEffect':''}`}>
+    <div className={`App ${Glitch ? 'GlitchingEffect':''} ${Gone ? 'Gone':''}`}>
       <Header/>
     <Intro/>
     <Idetification/>

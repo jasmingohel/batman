@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import style from './intro.module.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { setChangeMessage, setGlitch } from '../../store/slice';
+import { EnableGone, setChangeMessage, setGlitch } from '../../store/slice';
 
 function Intro() {
     // const [changeMesage, setChangeMessage] = useState(false);
@@ -23,7 +23,7 @@ function Intro() {
             }}
             onClick={() => { dispatch(setChangeMessage());
                 setTimeout(() => {
-                    dispatch(setGlitch())    
+                    dispatch(EnableGone())    
                 }, 3000);
                 }}
         >
