@@ -1,8 +1,7 @@
 .Infromation {
   display: flex;
 }
-.BatSignContainer
-{
+.BatSignContainer {
   position: relative;
   display: flex;
 }
@@ -17,121 +16,128 @@
   z-index: -1;
   transform: skew(0deg, 0deg) translateX(-28em) translateY(39rem) rotate(360deg);
   width: 500px;
-  height: 250px;
-
+  height: 250px;  
   animation: Hovering 13s ease;
 }
-.Batman{
-  filter: drop-shadow(0px 0px 193px rgb(255, 0, 0)) ;
+.Batman {
+  filter: drop-shadow(0px 0px 193px rgb(255, 0, 0));
   animation: Flash 4s infinite;
 }
-.FindIt{
-  font-family: 'IM Fell DW Pica SC', serif;
+.FindIt {
+  font-family: "IM Fell DW Pica SC", serif;
   font-size: small;
-  opacity: .8;
+  opacity: 0.8;
 }
-.FindIt:hover{
-color: red;
-transform: translateX(10px);
-transition: all 1s ease-out;
+.FindIt:hover {
+  color: red;
+  transform: translateX(10px);
+  transition: all 1s ease-out;
 }
-.MessageContainer
-{
+.MessageContainer {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
-.SunHolder{
+.SunHolder {
   width: 400px;
   height: 400px;
   overflow: hidden;
 }
-.MessageEndingImage{
+.MessageEndingImage {
   filter: drop-shadow(7px 8px 5px red);
   animation: Rise 20s ease;
 }
-.SignContainer{
+.SignContainer {
 }
-.Signature{
+.Signature {
   position: absolute;
   width: 300%;
   height: 100%;
   top: -20%;
   left: -190%;
-  padding:15%;
+  padding: 15%;
   background-color: rgb(233, 21, 21);
-  animation: end 3s ease ;
-
+  animation: end 3s ease;
 }
-.InfromationalTxt{
+.InfromationalTxt {
   padding: 5px 20px;
 }
 @keyframes end {
-  0%{
+  0% {
     background-color: transparent;
   }
-  100%{
+  100% {
     background-color: rgb(233, 21, 21);
   }
 }
 @keyframes Rise {
-  0%{
+  0% {
     transform: translateY(400px);
     filter: drop-shadow(0px -108px 20px white);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0px);
     filter: drop-shadow(7px 8px 5px red);
     opacity: 1;
   }
-  
 }
 
 @keyframes Flash {
-
-  50%{
-    filter: drop-shadow(3px 4px 193px rgb(114, 67, 67)) ;
+  50% {
+    filter: drop-shadow(3px 4px 193px rgb(114, 67, 67));
   }
-
 }
 @keyframes Hovering {
-  0%{
+  0% {
     width: 200px;
-  height: 90px;
-  transform: skew(0deg, 0deg) translateX(0rem) translateY(0rem) rotate(0deg);
+    height: 90px;
+    transform: skew(0deg, 0deg) translateX(0rem) translateY(0rem) rotate(0deg);
   }
-  17%{
-    transform: skew(0deg, 0deg) translateX(-3rem) translateY(-9rem) rotate(20deg);
+  17% {
+    transform: skew(0deg, 0deg) translateX(-3rem) translateY(-9rem)
+      rotate(20deg);
     width: 200px;
     height: 90px;
   }
-  33%{
-    transform: skew(0deg, 0deg) translateX(-3rem) translateY(-15rem) rotate(150deg);
+  33% {
+    transform: skew(0deg, 0deg) translateX(-3rem) translateY(-15rem)
+      rotate(150deg);
   }
-  50%{
-    transform: skew(0deg, 0deg) translateX(-3rem) translateY(0rem) rotate(180deg);
+  50% {
+    transform: skew(0deg, 0deg) translateX(-3rem) translateY(0rem)
+      rotate(180deg);
   }
-  67%{
-    transform: skew(0deg, 0deg) translateX(-9rem) translateY(30rem) rotate(230deg);
+  67% {
+    transform: skew(0deg, 0deg) translateX(-9rem) translateY(30rem)
+      rotate(230deg);
     width: 200px;
     height: 90px;
   }
-  84%
-  {
-    transform: skew(0deg, 0deg) translateX(-19rem) translateY(39rem) rotate(360deg);
+  84% {
+    transform: skew(0deg, 0deg) translateX(-19rem) translateY(39rem)
+      rotate(360deg);
     z-index: -1;
   }
-  100%{
-    transform: skew(0deg, 0deg) translateX(-28em) translateY(39rem) rotate(360deg);
+  100% {
+    transform: skew(0deg, 0deg) translateX(-28em) translateY(39rem)
+      rotate(360deg);
     z-index: -1;
     width: 500px;
     height: 250px;
   }
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .Infromation {
     flex-direction: column;
+  }
+  .Batman {
+    height: 50vh;
+    width: 104vw;
+  }
+  .BatSign {
+    left: 102%;
+    top: -170%;
   }
 }
