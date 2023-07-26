@@ -13,9 +13,9 @@ function Idetification() {
     return (
         <>
             {password !== 'nathyad' ?
-                <TransitionGroup >
+                <TransitionGroup className={style.ForSpace} >
                     <CSSTransition timeout={5000}
-                        classNames="item">
+                        classNames={`item `} >
                         <form class={style.container}>
                             <div className={style.inputcontainer}>
                                 <div className={style.inputcontent}>

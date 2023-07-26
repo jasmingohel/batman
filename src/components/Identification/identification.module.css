@@ -3,7 +3,10 @@ to use (the only way i know to do this correctly is using JS)
 this is meant to be wide supported and it really depends on you browsers
 if i realize any way to stylize the eye it could be added in the future
 in other input type*/
-
+.ForSpace{
+  height: 100vh;
+  width: 100vw;
+}
 .container {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;

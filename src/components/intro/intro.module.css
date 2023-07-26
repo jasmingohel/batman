@@ -1,6 +1,8 @@
 
 .Intro
 {
+    height: 100vh;
+    width: 100vw; /* changes */
     background-color: black;
     display: flex;
     justify-content: center;

@@ -36,7 +36,8 @@
     content: 'Dont Even';
     position: absolute;
     width: 100%;
-    left:110%;
+    /* left:110%; */
+    top: 110%;
     color: transparent;
 }
 .Contact:hover::before{
@@ -57,4 +58,10 @@
     color: red;
     top: 100%;
     transition: all 1s ease;
+}
+@media screen and (max-width: 765px) {
+    .Header .headerul{
+        flex-direction: column;
+        width: 100%;
+    }
 }
