@@ -23,6 +23,7 @@ in other input type*/
   }
   
   .inputcontainer {
+    height: 17vh;
     /* background-color: rgb(151, 0, 0); */
     filter: drop-shadow(46px 36px 24px #ffffff) drop-shadow(-55px -40px 25px #ff0000);
     animation: blinkShadowsFilter 8s ease-in infinite;

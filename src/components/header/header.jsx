@@ -6,7 +6,7 @@ import { DisableGlitch, setGlitch } from '../../store/slice';
 
 function Header() {
     const dispatch=useDispatch();
-
+console.log(0.2+.1)
     return (
         <motion.div
             className={style.Header}
